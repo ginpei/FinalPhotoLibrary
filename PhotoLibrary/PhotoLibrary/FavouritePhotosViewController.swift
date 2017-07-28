@@ -20,8 +20,6 @@ class FavouritePhotosViewController: UIViewController, UICollectionViewDelegate 
             self.collectionView.dataSource = photoDataSource
             self.collectionView.delegate = self
             
-            updateDataSource()
-            
             store.fetchInterestingPhotos { (photosResult) in
                 // when the task is done we will get the photosResult as [Photo]
                 // async task
@@ -30,7 +28,11 @@ class FavouritePhotosViewController: UIViewController, UICollectionViewDelegate 
             
             // Do any additional setup after loading the view.
         }
-        
+    
+        override func viewWillAppear(_ animated: Bool) {
+            updateDataSource()
+        }
+    
         private func updateDataSource() {
             store.fetchFavouritePhotos { (photoResult) in
                 switch photoResult {
