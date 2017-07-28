@@ -169,11 +169,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSR-IK-c8o">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="510"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdc-L9-dFj">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                 <items>
+                                    <barButtonItem title="Favourite" style="plain" id="o9K-dR-BNN">
+                                        <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Fq5-RT-kel">
+                                            <rect key="frame" x="16" y="6.5" width="51" height="31"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="favouriteSwitch_valueChanged:" destination="4cc-6m-bJf" eventType="valueChanged" id="0GI-xJ-Z5b"/>
+                                            </connections>
+                                        </switch>
+                                    </barButtonItem>
                                     <barButtonItem title="Tags" id="XGu-Bz-PLw">
                                         <connections>
                                             <segue destination="UH3-bv-2k7" kind="presentation" identifier="showTags" id="sKw-M2-p4h"/>
@@ -195,6 +204,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="favouriteSwitch" destination="Fq5-RT-kel" id="ePE-Dp-hdt"/>
                         <outlet property="imageView" destination="uSR-IK-c8o" id="PHr-4M-7T0"/>
                     </connections>
                 </viewController>

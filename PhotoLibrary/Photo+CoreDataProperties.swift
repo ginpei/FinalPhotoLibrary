@@ -17,6 +17,7 @@ extension Photo {
     }
 
     @NSManaged public var dateTaken: NSDate?
+    @NSManaged public var favourite: Bool
     @NSManaged public var photoID: String?
     @NSManaged public var remoteURL: NSURL?
     @NSManaged public var title: String?

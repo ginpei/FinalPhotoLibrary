@@ -7,13 +7,27 @@
 //
 
 import UIKit
+import CoreData
 
 class PhotoInfoViewController: UIViewController {
 
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet weak var favouriteSwitch: UISwitch!
+    let persistentContainer: NSPersistentContainer = {
+        let containter = NSPersistentContainer(name: "PhotoLibrary")
+        containter.loadPersistentStores { (
+            description, error) in
+            
+            if let error = error {
+                print("Error setting up CoreData(\(error)).")
+            }
+        }
+        return containter
+    }()
     var photo: Photo! {
         didSet{
             navigationItem.title = photo.title
+            favouriteSwitch?.isOn = photo.favourite
         }
     }
     var store: PhotoStore!
@@ -21,6 +35,7 @@ class PhotoInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        favouriteSwitch.isOn = photo.favourite
         store.fetchImage(for: photo) { (result) in
             switch result {
             case let .success(image):
@@ -41,6 +56,16 @@ class PhotoInfoViewController: UIViewController {
             tagController.photo = photo
         default:
             preconditionFailure("Unexpected Segue Identifier.")
+        }
+    }
+    
+    @IBAction func favouriteSwitch_valueChanged(_ sender: UISwitch) {
+        photo.favourite = sender.isOn
+        
+        do {
+            try persistentContainer.viewContext.save()
+        } catch let error {
+            print("ERROR", error)
         }
     }
 }
