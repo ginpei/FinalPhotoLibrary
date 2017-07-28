@@ -133,6 +133,7 @@
                                         <connections>
                                             <outlet property="imageView" destination="cTS-Mp-BbO" id="RTN-49-hJf"/>
                                             <outlet property="spinner" destination="XW0-hP-mxT" id="efE-Sz-Eic"/>
+                                            <segue destination="4cc-6m-bJf" kind="show" identifier="showPhoto" id="YGM-Sg-xRS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -304,4 +305,7 @@
             <point key="canvasLocation" x="1133.5999999999999" y="-645.42728635682158"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YGM-Sg-xRS"/>
+    </inferredMetricsTieBreakers>
 </document>
