@@ -18,9 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         let rootViewController = window?.rootViewController as! UINavigationController
-        let photosViewController = rootViewController.topViewController as! PhotosViewController
-        
-        photosViewController.store = PhotoStore()
+        if let topLevelViewControllers = (rootViewController.topViewController as! UITabBarController).viewControllers {
+            let store = PhotoStore()
+            for vc in topLevelViewControllers {
+                if let vc = vc as? PhotosViewController {
+                    vc.store = store
+                }
+                else if let vc = vc as? FavouritePhotosViewController {
+                    vc.store = store
+                }
+            }
+        }
         
         return true
     }

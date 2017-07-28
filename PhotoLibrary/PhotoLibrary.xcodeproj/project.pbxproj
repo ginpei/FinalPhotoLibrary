@@ -23,6 +23,7 @@
 		4EEC9CA91F2693C00079085F /* PhotoLibrary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC9CA71F2693C00079085F /* PhotoLibrary.xcdatamodeld */; };
 		4EFC4D401F0EFEA00069FAC8 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC4D3F1F0EFEA00069FAC8 /* PhotoDataSource.swift */; };
 		4EFC4D421F0F035F0069FAC8 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFC4D411F0F035F0069FAC8 /* PhotoCollectionViewCell.swift */; };
+		E4CEA1F21F2BFAE600D86467 /* FavouritePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CEA1F11F2BFAE600D86467 /* FavouritePhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		4EEC9CA81F2693C00079085F /* PhotoLibrary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoLibrary.xcdatamodel; sourceTree = "<group>"; };
 		4EFC4D3F1F0EFEA00069FAC8 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		4EFC4D411F0F035F0069FAC8 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		E4CEA1F11F2BFAE600D86467 /* FavouritePhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouritePhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				4EA7C1251F2930DE00F7B40E /* Photo+CoreDataProperties.swift */,
 				4E134E021F22A0E700F34163 /* PhotoInfoViewController.swift */,
 				4EB0E2E91F0C346C007F9EDC /* PhotosViewController.swift */,
+				E4CEA1F11F2BFAE600D86467 /* FavouritePhotosViewController.swift */,
 				4EA7C1291F2934DE00F7B40E /* TagsViewController.swift */,
 				4EB0E2D71F0C343E007F9EDC /* AppDelegate.swift */,
 				4EB0E2DB1F0C343E007F9EDC /* Main.storyboard */,
@@ -177,6 +180,7 @@
 				4EB0E2EA1F0C346C007F9EDC /* PhotosViewController.swift in Sources */,
 				4EB0E2EE1F0C48B2007F9EDC /* PhotoStore.swift in Sources */,
 				4EA7C12A1F2934DE00F7B40E /* TagsViewController.swift in Sources */,
+				E4CEA1F21F2BFAE600D86467 /* FavouritePhotosViewController.swift in Sources */,
 				4E4329431F1EA68A00AC4B8A /* ImageStore.swift in Sources */,
 				4EFC4D401F0EFEA00069FAC8 /* PhotoDataSource.swift in Sources */,
 				4EFC4D421F0F035F0069FAC8 /* PhotoCollectionViewCell.swift in Sources */,
