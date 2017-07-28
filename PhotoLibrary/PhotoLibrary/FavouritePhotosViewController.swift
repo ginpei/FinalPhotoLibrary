@@ -32,7 +32,7 @@ class FavouritePhotosViewController: UIViewController, UICollectionViewDelegate 
         }
         
         private func updateDataSource() {
-            store.fetchAllPhotos { (photoResult) in
+            store.fetchFavouritePhotos { (photoResult) in
                 switch photoResult {
                 case let .success(photos):
                     self.photoDataSource.photos = photos
